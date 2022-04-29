@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2>Stimuchat</h2>
+    <section>
+      <ChatForm/>
+       <ShowChat/>
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ChatForm from './components/form-chat.vue'
+import ShowChat from './components/show-chat.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ChatForm,
+    ShowChat
   }
 }
 </script>
 
 <style>
 #app {
+  width: 40%;
+  margin: 0 auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
-  margin-top: 60px;
+}
+section {
+  display: flex;
+  justify-content: space-between;
+}
+h2 {
+  text-align: center;
 }
 </style>
